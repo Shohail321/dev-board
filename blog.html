@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-slate-100">
+
+    <div class="flex max-w-7xl mx-auto justify-between items-center bg-white p-4 shadow rounded-lg mb-6 mt-4">
+
+        <div class="flex">
+            <img class="w-7 mr-2 " src="assets/logo.png" alt="">
+            <h1 class="text-2xl font-bold text-gray-400">Dev<span class="text-black">Board</span></h1>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <button id="back-home" class="bg-blue-700 px-4 py-2 rounded-lg text-white font-semibold">Back to
+                Desk</button>
+
+
+        </div>
+    </div>
+    <h1 class="text-center text-2xl font-bold">Blogs</h1>
+
+
+    <div class="max-w-7xl mx-auto justify-between items-center bg-white p-4 shadow-md rounded-lg mb-6 mt-4">
+        
+        <div class="mb-3">
+            <p class="text-lg font-semibold">Question-1: What are the different ways to select an element in the DOM?</p>
+            <hr class="border-2px-dotted mt-2 mb-2">
+            <p>You can select DOM elements using methods like getElementById("id") for a unique ID, getElementsByClassName("class") for multiple elements with the same class, and querySelector("selector") for the first matching element. For multiple matches, querySelectorAll("selector") returns a NodeList. Other methods include getElementsByTagName("tag") and getElementsByName("name"). Use getElementById for speed and querySelector for flexibility.</p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto justify-between items-center bg-white p-4 shadow-md rounded-lg mb-6 mt-4">
+        
+        <div class="mb-3">
+            <p class="text-lg font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+            <hr class="border-2px-dotted mt-2 mb-2">
+            <p>innerHTML, innerText, and textContent are used to access or modify the content of elements in the DOM. innerHTML allows you to retrieve or set the HTML content inside an element, including tags. innerText gives the visible text of an element, ignoring hidden elements and styles, while textContent retrieves or sets all the text, including from hidden elements, and is faster than innerText. Generally, innerHTML is used for handling HTML, innerText for visible text, and textContent for fast, comprehensive text manipulation.</p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto justify-between items-center bg-white p-4 shadow-md rounded-lg mb-6 mt-4">
+        
+        <div class="mb-3">
+            <p class="text-lg font-semibold">Question-3: What is event delegation in the DOM?</p>
+            <hr class="border-2px-dotted mt-2 mb-2">
+            <p>Event delegation is a technique in the DOM where a single event listener is attached to a parent element instead of individual child elements. This listener then handles events for all of the child elements, even those added dynamically.</p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto justify-between items-center bg-white p-4 shadow-md rounded-lg mb-6 mt-4">
+        
+        <div class="mb-3">
+            <p class="text-lg font-semibold">Question-4: What is event bubbling in the DOM?</p>
+            <hr class="border-2px-dotted mt-2 mb-2">
+            <p>Event bubbling is a concept in the DOM where an event that is triggered on an element propagates (or "bubbles") up the DOM tree to its parent elements, and then to the root of the document. When an event occurs, the browser first runs the event handler on the target element, and then the event "bubbles" up through each ancestor element, triggering any event listeners attached to them, in the order from the target to the root.</p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto justify-between items-center bg-white p-4 shadow-md rounded-lg mb-6 mt-4">
+        
+        <div class="mb-3">
+            <p class="text-lg font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?</p>
+            <hr class="border-2px-dotted mt-2 mb-2">
+            <p>In JavaScript, you can create, add, and remove elements dynamically using various DOM methods. To create an element, use document.createElement(), which generates a new element, such as a <div>. To add the element to the DOM, you can use appendChild(), append(), or insertBefore() depending on where you want to insert the element within the parent. To remove an element, removeChild() can be used to delete a child from a specific parent, or remove() can be called directly on the element to remove it from the DOM. These methods allow you to manipulate the DOM efficiently, enabling dynamic changes to your webpage.</p>
+        </div>
+    </div>
+
+   
+
+
+    <script>
+        document.getElementById("back-home").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "./index.html"
+
+
+        })
+    </script>
+</body>
+
+</html>
