@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Create log entry
             let logEntry = document.createElement("p");
-            logEntry.innerText = `${taskName} completed at - ${currentTime}`;
-            logEntry.classList.add("text-sm","text-black", "mt-1","gap-2");
+            logEntry.innerText = `${taskName} - ${currentTime}`;
+            logEntry.classList.add("text-sm", "text-gray-700", "mt-1");
 
             // Append to Activity Log
             activityLog.appendChild(logEntry);
