@@ -29,46 +29,55 @@ document.addEventListener("DOMContentLoaded", function () {
     const activityLog = document.getElementById("activityLog");
     const clearLogButton = document.getElementById("clearLog");
 
-   
+
 
 
     buttons.forEach(button => {
         button.addEventListener("click", function () {
-            alert("Task is completed");
+            alert("Task is completed✅");
             button.disabled = true;
             button.classList.add("opacity-50", "cursor-not-allowed");
 
+
+            // task assigned decrease
             let taskCount = parseInt(taskCountElement.innerText);
             if (taskCount > 0) {
                 taskCount--;
                 taskCountElement.innerText = taskCount;
-                
+
             }
+            // board increase
             let boardIncrease = document.getElementById("boardUpdate")
             let boardCount = parseInt(boardIncrease.innerText);
             if (boardCount > 0) {
                 boardCount++;
                 boardIncrease.innerText = boardCount;
-                // document.getElementById("boardCount").innerText = boardCount;
+               
             }
-        
 
-            // Get the task name and time
-            let taskName = button.parentElement.parentElement.parentElement.querySelector("h2").innerText;
+
+        //  append actitivity logs
+
+            let taskName = button.parentElement.parentElement.querySelector("h2").innerText;
             let currentTime = new Date().toLocaleTimeString();
 
-            // Create log entry
+           
             let logEntry = document.createElement("p");
-            logEntry.innerText = `${taskName} completed at - ${currentTime}`;
-            logEntry.classList.add("text-sm","text-black", "mt-1","gap-2");
+            logEntry.innerHTML = `<strong>${taskName}</strong> completed at - ${currentTime}`;
+            logEntry.classList.add("text-sm", "text-black", "mt-1", "gap-2");
 
-            // Append to Activity Log
+            
             activityLog.appendChild(logEntry);
+
+            if (taskCount == 0) {
+                alert("Completed All Tasks✅, Congratulations❤️️");
+            }
+
         });
     });
 
     // Clear Activity Log when button is clicked
     clearLogButton.addEventListener("click", function () {
-        activityLog.innerHTML = ""; // Clears all log entries
+        activityLog.innerHTML = ""; 
     });
 });
